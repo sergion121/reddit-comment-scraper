@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reddit Comment Scraper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+        }
+        label, textarea, input, button {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        textarea {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reddit Comment Scraper</h1>
+
+    <!-- The form where the user enters a Reddit URL -->
+    <form action="/scrape" method="POST">
+        <label for="reddit_url">Reddit Thread URL:</label>
+        <input type="text" id="reddit_url" name="reddit_url"
+               placeholder="https://www.reddit.com/r/... or https://redd.it/..."
+               required>
+
+        <button type="submit">Scrape</button>
+    </form>
+
+    <!-- The multi-line text box where we display scraped comments -->
+    <label for="scraped_comments">Scraped Comments and Votes:</label>
+    <textarea id="scraped_comments" name="scraped_comments" readonly>
+{% if scraped_data %}
+{{ scraped_data }}
+{% endif %}
+    </textarea>
+</body>
+</html>
