@@ -12,7 +12,7 @@ A simple Python web application built with Flask and PRAW to scrape comments fro
 6. Run the application: `python app.py`
 7. Open your web browser and go to `http://127.0.0.1:5000`.
 
-## Usage
+## Usages
 
 Enter a Reddit thread URL in the input field and click "Scrape". The comments will be displayed in the text area below.
 
